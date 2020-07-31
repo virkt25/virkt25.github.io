@@ -1685,10 +1685,6 @@ li .fa {
   margin-bottom: 60px;
 }
 
-.mh-professional-skills {
-  padding-left: 20%;
-}
-
 .mh-professional-skills h3 {
   font-size: 30px;
   line-height: 40px;
@@ -1701,7 +1697,7 @@ li .fa {
   display: inline-block;
   margin: 0 auto;
   float: none;
-  width: 48%;
+  width: 24%;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -1713,6 +1709,18 @@ li .fa {
 
 .mh-progress .progressbar-text {
   color: inherit !important;
+}
+
+.mh-progress-icon {
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0px;
+  margin: 0px;
+  transform: translate(-50%, -50%);
 }
 
 .progress.progress-line {
