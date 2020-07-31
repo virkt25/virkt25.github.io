@@ -1697,9 +1697,15 @@ li .fa {
   display: inline-block;
   margin: 0 auto;
   float: none;
-  width: 24%;
+  width: 12%;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .mh-professional-progress li {
+    width: 49%;
+  }
 }
 
 .mh-progress {
@@ -1721,6 +1727,7 @@ li .fa {
   padding: 0px;
   margin: 0px;
   transform: translate(-50%, -50%);
+  background: #ffffff;
 }
 
 .progress.progress-line {
