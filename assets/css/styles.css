@@ -1928,7 +1928,8 @@ li .fa {
   font-weight: 600;
 }
 
-.mh-work .mh-experience-deatils .mh-work-item h4 a {
+.mh-work .mh-experience-deatils .mh-work-item h4 a,
+.mh-work .mh-experience-deatils .mh-work-item h5 a {
   color: #0bceaf;
 }
 
