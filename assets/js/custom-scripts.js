@@ -362,6 +362,8 @@
     | CONTACT FORM
     |=================
     */
+
+      const myForm = $("#contactForm");
         
       $("#contactForm").validator().on("submit", function (event) {
           if (event.isDefaultPrevented()) {
@@ -376,22 +378,38 @@
        });
     
         function submitForm(){
-          var name = $("#name").val();
-          var email = $("#email").val();
-          var message = $("#message").val();
-          $.ajax({
-              type: "POST",
-              url: "process.php",
-              data: "name=" + name + "&email=" + email + "&message=" + message,
-              success : function(text){
-                  if (text == "success"){
-                      formSuccess();
-                    } else {
-                      formError();
-                      submitMSG(false,text);
-                    }
-                }
-            });
+          // Change to your service ID, or keep using the default service
+          var service_id = "default_service";
+          var template_id = "contact_us_form_virk_cc";
+
+          emailjs.sendForm(service_id,template_id,myForm[0])
+          .then(function(){
+            formSuccess();
+            // myForm.find("button").text("Send");
+          }, function(err) {
+            const text = `Send email failed! Response:\n${JSON.stringify(err)}`;
+            formError();
+            submitMSG(false,text);
+            // alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+            // myForm.find("button").text("Send");
+          });
+
+          // var name = $("#name").val();
+          // var email = $("#email").val();
+          // var message = $("#message").val();
+          // $.ajax({
+          //     type: "POST",
+          //     url: "process.php",
+          //     data: "name=" + name + "&email=" + email + "&message=" + message,
+          //     success : function(text){
+          //         if (text == "success"){
+          //             formSuccess();
+          //           } else {
+          //             formError();
+          //             submitMSG(false,text);
+          //           }
+          //       }
+          //   });
         }
         function formSuccess(){
             $("#contactForm")[0].reset();

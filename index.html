@@ -48,6 +48,12 @@
     <!-- <link rel="stylesheet" href="assets/css/colors/slate.css" title="slate"> -->
     <!-- <link rel="stylesheet" href="assets/css/colors/yellow.css" title="yellow"> -->
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_dlgROi1m7IRGG3k2xScEd");
+        })();
+    </script>
 </head>
 
 <body class="white-vertion black-bg">
@@ -1194,17 +1200,17 @@
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <input name="name" class="contact-name form-control" id="name" type="text"
+                                            <input name="user_name" class="contact-name form-control" id="name" type="text"
                                                 placeholder="Name" required>
                                         </div>
 
                                         <div class="col-sm-12">
-                                            <input name="email" class="contact-subject form-control" id="email"
+                                            <input name="user_email" class="contact-subject form-control" id="email"
                                                 type="email" placeholder="Your Email" required>
                                         </div>
 
                                         <div class="col-sm-12">
-                                            <textarea class="contact-message" id="message" rows="6"
+                                            <textarea class="contact-message" id="message" rows="6" name="message"
                                                 placeholder="Your Message" required></textarea>
                                         </div>
 
